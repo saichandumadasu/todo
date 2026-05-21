@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>My Todos</h1>
+
+    <!-- Add todo form -->
+    <form id="add-form" class="add-form">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="What needs to be done?"
+        autocomplete="off"
+        maxlength="255"
+        required
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Todo list -->
+    <ul id="todo-list" class="todo-list">
+      <!-- Items injected by app.js -->
+    </ul>
+
+    <!-- Footer counts -->
+    <p id="item-count" class="item-count"></p>
+
+    <!-- Error banner (hidden by default) -->
+    <div id="error-banner" class="error-banner hidden"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
